@@ -1,0 +1,28 @@
+.title {
+  /* background-color: black; */
+  height: 400px;
+  color: white;
+  background-image: url(./images/img.png);
+  background-size: cover;
+}
+.tt:hover {
+  color: rgb(5, 5, 5);
+}
+.mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+}
+.mid2 {
+  background-color: rgb(93, 169, 146);
+  border: 1px solid rgb(109, 88, 88);
+  border-radius: 30px;
+  color: black;
+}
+.mid2:hover {
+  background: rgb(157, 127, 127);
+}
