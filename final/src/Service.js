@@ -45,6 +45,7 @@ class Service extends Component {
           <td>{el.last_name}</td>
           <td>{el.address}</td>
           <td>{el.zip_code}</td>
+          <td>{el.date}</td>
           <td>{el.arrival_time}</td>
           <td>{el.phone}</td>
           <td>{el.email}</td>
@@ -60,6 +61,7 @@ class Service extends Component {
             <th>last name</th>
             <th>Address</th>
             <th>Zip Code</th>
+            <th>Date</th>
             <th>Arrival Time</th>
             <th>Phone</th>
             <th>Email</th>

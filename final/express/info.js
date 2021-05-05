@@ -11,15 +11,18 @@ let Information = new Schema({
     type: String,
   },
   zip_code: {
-    type: Number,
+    type: String,
   },
   arrival_time: {
     type: String,
   },
   phone: {
-    type: Number,
+    type: String,
   },
   email: {
+    type: String,
+  },
+  date: {
     type: String,
   },
 });

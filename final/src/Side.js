@@ -32,11 +32,17 @@ export default function SidebarExample() {
     <Router>
       <div className="side2">
         <div className="side1">
-          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/" className="si">
+            HOME
+          </NavLink>
 
-          <NavLink to="/Service">LIST</NavLink>
+          <NavLink to="/Service" className="si">
+            LIST
+          </NavLink>
 
-          <NavLink to="/Nav">SOCIAL MEDIA</NavLink>
+          <NavLink to="/Nav" className="si">
+            SOCIAL MEDIA
+          </NavLink>
 
           <Switch>
             {routes.map((route, index) => (

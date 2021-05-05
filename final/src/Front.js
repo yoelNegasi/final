@@ -11,6 +11,7 @@ class Front extends Component {
       last_name: "",
       address: "",
       zip_code: "",
+      date: "",
       arrival_time: "",
       phone: "",
       email: "",
@@ -19,6 +20,7 @@ class Front extends Component {
     this.lName = this.lName.bind(this);
     this.address = this.address.bind(this);
     this.zip = this.zip.bind(this);
+    this.date = this.date.bind(this);
     this.time = this.time.bind(this);
     this.phone = this.phone.bind(this);
     this.email = this.email.bind(this);
@@ -32,6 +34,9 @@ class Front extends Component {
   }
   address(e) {
     this.setState({ address: e.target.value });
+  }
+  date(e) {
+    this.setState({ date: e.target.value });
   }
   zip(e) {
     this.setState({ zip_code: e.target.value });
@@ -49,7 +54,9 @@ class Front extends Component {
     axios.post("http://localhost:3001/info", this.state).then((response) => {
       console.log(response.data);
     });
-    alert(`we send email to ${this.state.email}`);
+    alert(
+      `We have Received your information Someone from our team will contact you by this  ${this.state.email} email`
+    );
     this.setState({
       first_name: " ",
       last_name: " ",
@@ -58,6 +65,7 @@ class Front extends Component {
       arrival_time: " ",
       phone: " ",
       email: " ",
+      date: " ",
     });
   }
   render() {
@@ -78,8 +86,8 @@ class Front extends Component {
           <input
             type="text"
             value={this.state.last_name}
-            onChange={this.lName}
             required
+            onChange={this.lName}
           />
         </div>
         <br />
@@ -104,6 +112,16 @@ class Front extends Component {
         </div>
         <br />
         <div>
+          DATE {""}
+          <input
+            type="date"
+            value={this.state.date}
+            onChange={this.date}
+            required
+          />
+        </div>
+        <br />
+        <div>
           ARRIVAL TIME {""}
           <input
             type="time"
@@ -116,7 +134,7 @@ class Front extends Component {
         <div>
           PHONE {""}
           <input
-            type="phone"
+            type="tel"
             value={this.state.phone}
             onChange={this.phone}
             required

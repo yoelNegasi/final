@@ -6,10 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Orelega One", cursive;
-  background-color: rgb(208, 220, 208);
+  background-image: url(./images/Screen\ Shot\ 2021-05-05\ at\ 3.49.55\ PM.png);
+  background-size: cover;
+  /* background-color: rgb(208, 220, 208); */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* //rgb(208, 220, 208); */
