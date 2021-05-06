@@ -51,9 +51,11 @@ class Front extends Component {
     this.setState({ email: e.target.value });
   }
   submit(e) {
-    axios.post("http://localhost:3001/info", this.state).then((response) => {
-      console.log(response.data);
-    });
+    axios
+      .post("https://protected-anchorage-47052.herokuapp.com/info", this.state)
+      .then((response) => {
+        console.log(response.data);
+      });
     alert(
       `We have Received your information Someone from our team will contact you by this  ${this.state.email} email`
     );

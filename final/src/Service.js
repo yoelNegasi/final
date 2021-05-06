@@ -11,13 +11,15 @@ class Service extends Component {
     this.recive = this.recive.bind(this);
   }
   recive() {
-    axios.get("http://localhost:3001/find").then((res) => {
-      this.setState({ detail: res.data });
-    });
+    axios
+      .get("https://protected-anchorage-47052.herokuapp.com/find")
+      .then((res) => {
+        this.setState({ detail: res.data });
+      });
   }
   deleteSpecific(passedId) {
     axios
-      .delete("http://localhost:3001/delete", {
+      .delete("https://protected-anchorage-47052.herokuapp.com/delete", {
         data: {
           id: passedId,
         },
